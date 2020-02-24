@@ -3,19 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11916856660CA7F72B2B81C2 /* Pods_RNTCiPiPStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E350560AA365F07686AC335 /* Pods_RNTCiPiPStoryboard.framework */; };
+		627AF15923FB3FF000AE04A1 /* ProfilePieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */; };
+		628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C00BE23F9931200BF2498 /* DesignableView.swift */; };
+		62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */; };
+		62A5E62223FAB3D4006FBB83 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */; };
 		62D9DDD223F97385007517B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D9DDD123F97385007517B9 /* AppDelegate.swift */; };
 		62D9DDD423F97385007517B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D9DDD323F97385007517B9 /* SceneDelegate.swift */; };
 		62D9DDD623F97385007517B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D9DDD523F97385007517B9 /* ViewController.swift */; };
 		62D9DDD923F97385007517B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDD723F97385007517B9 /* Main.storyboard */; };
 		62D9DDDB23F97388007517B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDDA23F97388007517B9 /* Assets.xcassets */; };
 		62D9DDDE23F97388007517B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDDC23F97388007517B9 /* LaunchScreen.storyboard */; };
+		62EAA4D523FB354700EC5232 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EAA4D423FB354700EC5232 /* ProfileViewController.swift */; };
+		62EBA0D223FAC8D400FA2E78 /* TestOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EBA0D123FAC8D400FA2E78 /* TestOneViewController.swift */; };
+		62FD86A323FDE71B00E1D3B5 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD86A223FDE71B00E1D3B5 /* Points.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47F42D19F337ED1C5D3404E8 /* Pods-RNTCiPiPStoryboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTCiPiPStoryboard.release.xcconfig"; path = "Target Support Files/Pods-RNTCiPiPStoryboard/Pods-RNTCiPiPStoryboard.release.xcconfig"; sourceTree = "<group>"; };
+		627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePieViewController.swift; sourceTree = "<group>"; };
+		628C00BE23F9931200BF2498 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TackCollectionViewController.swift; sourceTree = "<group>"; };
+		62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		62D9DDCE23F97385007517B9 /* RNTCiPiPStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTCiPiPStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D9DDD123F97385007517B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D9DDD323F97385007517B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,11 @@
 		62D9DDDA23F97388007517B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62D9DDDD23F97388007517B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62D9DDDF23F97388007517B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62EAA4D423FB354700EC5232 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		62EBA0D123FAC8D400FA2E78 /* TestOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOneViewController.swift; sourceTree = "<group>"; };
+		62FD86A223FDE71B00E1D3B5 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		7E350560AA365F07686AC335 /* Pods_RNTCiPiPStoryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNTCiPiPStoryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855DB4F487F2B84FCC2BC3E1 /* Pods-RNTCiPiPStoryboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTCiPiPStoryboard.debug.xcconfig"; path = "Target Support Files/Pods-RNTCiPiPStoryboard/Pods-RNTCiPiPStoryboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11916856660CA7F72B2B81C2 /* Pods_RNTCiPiPStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06BE30ADA9EAF7BF70CB1889 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E350560AA365F07686AC335 /* Pods_RNTCiPiPStoryboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A9E99756E302F9351FD26C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				855DB4F487F2B84FCC2BC3E1 /* Pods-RNTCiPiPStoryboard.debug.xcconfig */,
+				47F42D19F337ED1C5D3404E8 /* Pods-RNTCiPiPStoryboard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		628C00C623F997F900BF2498 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */,
+				62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */,
+				62EBA0D123FAC8D400FA2E78 /* TestOneViewController.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
 		62D9DDC523F97385007517B9 = {
 			isa = PBXGroup;
 			children = (
 				62D9DDD023F97385007517B9 /* RNTCiPiPStoryboard */,
 				62D9DDCF23F97385007517B9 /* Products */,
+				4A9E99756E302F9351FD26C0 /* Pods */,
+				06BE30ADA9EAF7BF70CB1889 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +104,8 @@
 		62D9DDD023F97385007517B9 /* RNTCiPiPStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				62EBA0D423FB318900FA2E78 /* Profile */,
+				628C00C623F997F900BF2498 /* Task */,
 				62D9DDD123F97385007517B9 /* AppDelegate.swift */,
 				62D9DDD323F97385007517B9 /* SceneDelegate.swift */,
 				62D9DDD523F97385007517B9 /* ViewController.swift */,
@@ -63,8 +113,19 @@
 				62D9DDDA23F97388007517B9 /* Assets.xcassets */,
 				62D9DDDC23F97388007517B9 /* LaunchScreen.storyboard */,
 				62D9DDDF23F97388007517B9 /* Info.plist */,
+				628C00BE23F9931200BF2498 /* DesignableView.swift */,
+				62FD86A223FDE71B00E1D3B5 /* Points.swift */,
 			);
 			path = RNTCiPiPStoryboard;
+			sourceTree = "<group>";
+		};
+		62EBA0D423FB318900FA2E78 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				62EAA4D423FB354700EC5232 /* ProfileViewController.swift */,
+				627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62D9DDE223F97388007517B9 /* Build configuration list for PBXNativeTarget "RNTCiPiPStoryboard" */;
 			buildPhases = (
+				66CC580B459F3CC30385ADA8 /* [CP] Check Pods Manifest.lock */,
 				62D9DDCA23F97385007517B9 /* Sources */,
 				62D9DDCB23F97385007517B9 /* Frameworks */,
 				62D9DDCC23F97385007517B9 /* Resources */,
+				3EE4515FFAC4A691F188B1D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +196,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EE4515FFAC4A691F188B1D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNTCiPiPStoryboard/Pods-RNTCiPiPStoryboard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNTCiPiPStoryboard/Pods-RNTCiPiPStoryboard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTCiPiPStoryboard/Pods-RNTCiPiPStoryboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66CC580B459F3CC30385ADA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNTCiPiPStoryboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62D9DDCA23F97385007517B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */,
 				62D9DDD623F97385007517B9 /* ViewController.swift in Sources */,
+				62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */,
+				62A5E62223FAB3D4006FBB83 /* TaskCollectionViewCell.swift in Sources */,
+				62EBA0D223FAC8D400FA2E78 /* TestOneViewController.swift in Sources */,
+				627AF15923FB3FF000AE04A1 /* ProfilePieViewController.swift in Sources */,
 				62D9DDD223F97385007517B9 /* AppDelegate.swift in Sources */,
+				62EAA4D523FB354700EC5232 /* ProfileViewController.swift in Sources */,
+				62FD86A323FDE71B00E1D3B5 /* Points.swift in Sources */,
 				62D9DDD423F97385007517B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +394,7 @@
 		};
 		62D9DDE323F97388007517B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855DB4F487F2B84FCC2BC3E1 /* Pods-RNTCiPiPStoryboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +413,7 @@
 		};
 		62D9DDE423F97388007517B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F42D19F337ED1C5D3404E8 /* Pods-RNTCiPiPStoryboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
