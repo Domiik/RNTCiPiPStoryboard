@@ -1,0 +1,6 @@
+framework module Pods_RNTCiPiPStoryboard {
+  umbrella header "Pods-RNTCiPiPStoryboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - SwiftyJSON (4.3.0)
+  - TKRadarChart (1.4.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
+  - Charts
+  - SwiftyJSON (~> 4.0)
+  - TKRadarChart
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Charts
+    - SwiftyJSON
+    - TKRadarChart
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TKRadarChart: 9e11cba496e47d60d5c5baced04ed8e35cdc9073
+
+PODFILE CHECKSUM: 457d398edb0ec40cc4485cc8b89eed541c650e6e
+
+COCOAPODS: 1.8.4
