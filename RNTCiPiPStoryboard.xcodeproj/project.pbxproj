@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		11916856660CA7F72B2B81C2 /* Pods_RNTCiPiPStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E350560AA365F07686AC335 /* Pods_RNTCiPiPStoryboard.framework */; };
+		622643A1242805010000F4A9 /* WWWViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622643A0242805010000F4A9 /* WWWViewerViewController.swift */; };
+		625484F5240BB78E00749D26 /* WWWCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484F4240BB78E00749D26 /* WWWCollectionViewController.swift */; };
+		625484F7240BC13500749D26 /* WWWCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484F6240BC13500749D26 /* WWWCollectionViewCell.swift */; };
+		625484FC240C340300749D26 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484F8240C340200749D26 /* CustomLayout.swift */; };
+		625484FD240C340300749D26 /* WWWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484F9240C340300749D26 /* WWWViewController.swift */; };
+		625484FE240C340300749D26 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484FA240C340300749D26 /* ItemCollectionViewCell.swift */; };
+		625484FF240C340300749D26 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625484FB240C340300749D26 /* ItemCollectionViewCell.xib */; };
 		627AF15923FB3FF000AE04A1 /* ProfilePieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */; };
 		628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C00BE23F9931200BF2498 /* DesignableView.swift */; };
 		62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */; };
@@ -25,6 +32,13 @@
 
 /* Begin PBXFileReference section */
 		47F42D19F337ED1C5D3404E8 /* Pods-RNTCiPiPStoryboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTCiPiPStoryboard.release.xcconfig"; path = "Target Support Files/Pods-RNTCiPiPStoryboard/Pods-RNTCiPiPStoryboard.release.xcconfig"; sourceTree = "<group>"; };
+		622643A0242805010000F4A9 /* WWWViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWViewerViewController.swift; sourceTree = "<group>"; };
+		625484F4240BB78E00749D26 /* WWWCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWCollectionViewController.swift; sourceTree = "<group>"; };
+		625484F6240BC13500749D26 /* WWWCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWCollectionViewCell.swift; sourceTree = "<group>"; };
+		625484F8240C340200749D26 /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		625484F9240C340300749D26 /* WWWViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWWViewController.swift; sourceTree = "<group>"; };
+		625484FA240C340300749D26 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		625484FB240C340300749D26 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePieViewController.swift; sourceTree = "<group>"; };
 		628C00BE23F9931200BF2498 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TackCollectionViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +87,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		625484F3240BB75A00749D26 /* WWW */ = {
+			isa = PBXGroup;
+			children = (
+				625484F8240C340200749D26 /* CustomLayout.swift */,
+				625484FA240C340300749D26 /* ItemCollectionViewCell.swift */,
+				625484FB240C340300749D26 /* ItemCollectionViewCell.xib */,
+				625484F9240C340300749D26 /* WWWViewController.swift */,
+				625484F4240BB78E00749D26 /* WWWCollectionViewController.swift */,
+				625484F6240BC13500749D26 /* WWWCollectionViewCell.swift */,
+				622643A0242805010000F4A9 /* WWWViewerViewController.swift */,
+			);
+			path = WWW;
+			sourceTree = "<group>";
+		};
 		628C00C623F997F900BF2498 /* Task */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +132,7 @@
 		62D9DDD023F97385007517B9 /* RNTCiPiPStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				625484F3240BB75A00749D26 /* WWW */,
 				62EBA0D423FB318900FA2E78 /* Profile */,
 				628C00C623F997F900BF2498 /* Task */,
 				62D9DDD123F97385007517B9 /* AppDelegate.swift */,
@@ -189,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D9DDDE23F97388007517B9 /* LaunchScreen.storyboard in Resources */,
+				625484FF240C340300749D26 /* ItemCollectionViewCell.xib in Resources */,
 				62D9DDDB23F97388007517B9 /* Assets.xcassets in Resources */,
 				62D9DDD923F97385007517B9 /* Main.storyboard in Resources */,
 			);
@@ -243,15 +273,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625484FE240C340300749D26 /* ItemCollectionViewCell.swift in Sources */,
+				625484F5240BB78E00749D26 /* WWWCollectionViewController.swift in Sources */,
 				628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */,
 				62D9DDD623F97385007517B9 /* ViewController.swift in Sources */,
 				62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */,
+				625484FD240C340300749D26 /* WWWViewController.swift in Sources */,
 				62A5E62223FAB3D4006FBB83 /* TaskCollectionViewCell.swift in Sources */,
 				62EBA0D223FAC8D400FA2E78 /* TestOneViewController.swift in Sources */,
+				625484F7240BC13500749D26 /* WWWCollectionViewCell.swift in Sources */,
 				627AF15923FB3FF000AE04A1 /* ProfilePieViewController.swift in Sources */,
 				62D9DDD223F97385007517B9 /* AppDelegate.swift in Sources */,
 				62EAA4D523FB354700EC5232 /* ProfileViewController.swift in Sources */,
 				62FD86A323FDE71B00E1D3B5 /* Points.swift in Sources */,
+				625484FC240C340300749D26 /* CustomLayout.swift in Sources */,
+				622643A1242805010000F4A9 /* WWWViewerViewController.swift in Sources */,
 				62D9DDD423F97385007517B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
