@@ -12,8 +12,8 @@ private let reuseIdentifier = "Cell"
 
 class TackCollectionViewController: UICollectionViewController {
     
-    let photos = ["Lion", "Lion", "Lion", "Lion", "Lion", "Lion"]
-    let name = ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6"]
+    let photos = ["Lion", "Lion", "Lion"]
+    let name = ["Test 1", "Test 2", "Test 3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +39,13 @@ class TackCollectionViewController: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailViewController = segue.destination as? TestOneViewController {
-            if let cell = sender as? TaskCollectionViewCell {
-                if let indexPath = collectionView?.indexPath(for: cell) {
-                    
-                }
-            }
-        }
+//        if let detailViewController = segue.destination as? TestOneViewController {
+//            if let cell = sender as? TaskCollectionViewCell {
+//                if let indexPath = collectionView?.indexPath(for: cell) {
+//
+//                }
+//            }
+//        }
     }
+
 }

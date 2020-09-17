@@ -16,7 +16,6 @@ class DesignableView: UIView {
         }
     }
     
-    
     @IBInspectable var shadowRaduis: CGFloat = 0 {
         didSet {
             layer.shadowRadius = shadowRaduis

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TestOneViewController: UIViewController {
 
@@ -15,8 +16,19 @@ class TestOneViewController: UIViewController {
     
     @IBOutlet weak var endTest: UIButton!
     
+    let defaults = UserDefaults.standard
     
-    var array1a = ["1а1", "1а2", "1а3", "1а4", "1а5"]
+    struct Data: Encodable {
+           let title: String
+           let mm: Int
+           let mn: Int
+           let mt: Int
+           let ms: Int
+           let ma: Int
+    }
+    
+    
+    var array1a = ["1а1", "1а2", "1а3", "1а4", "1а5","1а6"]
     var array1b = ["1б1", "1б2", "1б3", "1б4", "1б5"]
     var array2a = ["2а1", "2а2", "2а3", "2а4", "2а5"]
     var array2b = ["2б1", "2б2", "2б3", "2б4", "2б5"]
@@ -26,10 +38,10 @@ class TestOneViewController: UIViewController {
     var array4b = ["4б1", "4б2", "4б4", "4б5"]
     var array5a = ["5а1", "5а2", "5а3", "5а4", "5а5"]
     var array5b = ["5б1", "5б2", "5б3", "5б4", "5б5"]
-    var array6a = ["6а1", "6а2", "6а3", "6а4", "6а5"]
+    var array6a = ["6а1", "6а2", "6а3", "6а4", "6а5","6а6"]
     var array6b = ["6б1", "6б2", "6б3", "6б4", "6б5"]
-    var array7a = ["7а1", "7а2", "7а4", "7а5"]
-    var array7b = ["7б1", "7б2", "7б3", "7б4", "7б5"]
+    var array7a = ["7а1", "7а2","7а3", "7а4", "7а5"]
+    var array7b = ["7б1", "7б2", "7б4", "7б5"]
     var array8a = ["8а1", "8а2", "8а3", "8а4", "8а5"]
     var array8b = ["8б1", "8б2", "8б3", "8б4", "8б5"]
     var array9a = ["9а1", "9а2", "9а3", "9а4", "9а5"]
@@ -54,7 +66,7 @@ class TestOneViewController: UIViewController {
     var array18b = ["18б1", "18б3", "18б4", "18б5", "18б6"]
     var array19a = ["19а1", "19а2", "19а3", "19а4", "19а5"]
     var array19b = ["19б1", "19б2", "19б3", "19б4", "19б5"]
-    var array20a = ["20а1", "20а2", "20а3", "20а4", "20а5"]
+    var array20a = ["20а1", "20а2", "20а3", "20а4", "20а5","20а6"]
     var array20b = ["20б1", "20б2", "20б3", "20б4", "20б5"]
     
     var count: Int = 1
@@ -64,6 +76,7 @@ class TestOneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         endTest.isHidden = true
+        
         randomImage()
         //imageViewOne.setImage(UIImage(named: array1a.randomElement()!.description), for: .normal)
         //imageViewTwo.setImage(UIImage(named: array1b.randomElement()!.description), for: .normal)
@@ -166,7 +179,7 @@ class TestOneViewController: UIViewController {
     @IBAction func firstClickTest(_ sender: Any) {
         
         countFirstButton += 1
-        print(countFirstButton)
+        //print(countFirstButton)
         
         switch countFirstButton {
         case 1:
@@ -326,5 +339,41 @@ class TestOneViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func EndGame(_ sender: Any) {
+        postTest()
+        defaults.set(true, forKey: "firstAchievement")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "Back")
+        vc.definesPresentationContext = true
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil);
+    }
+    
+    
+    func postTest() {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer \(self.defaults.object(forKey: "Token")!)"
+        ]
+        
+        let data = Data(title: "ДДО", mm: Points.getPointHuman(), mn: Points.getPointNature(), mt: Points.getPointTechnique(), ms: Points.getPointSignSystem(), ma: Points.getPointArtistic())
+        AF.request("https://bromanla.ml/s/tests",
+        method: .post,
+        parameters: data,
+        encoder: JSONParameterEncoder.default,
+        headers: headers)
+        .responseString{ response in
+            //print(response.result)
+            switch response.result {
+                case .success:
+                    print("succsesOKOKOK")
+                case .failure(let error):
+                    if let data = response.data {
+                        print("Print Server Error: " + String(data: data, encoding: String.Encoding.utf8)!)
+                    }
+                        print(error)
+                }
+        }
+    }
+    
 }

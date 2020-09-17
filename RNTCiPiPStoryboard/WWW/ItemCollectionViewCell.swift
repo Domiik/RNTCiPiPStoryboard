@@ -10,10 +10,11 @@ import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
 
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var highlightIndicator: UIView!
-  @IBOutlet weak var selectIndicator: UIImageView!
-  
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var highlightIndicator: UIView!
+    @IBOutlet weak var selectIndicator: UIImageView!
+    @IBOutlet weak var nameW: UILabel!
+    
   override var isHighlighted: Bool {
     didSet {
       highlightIndicator.isHidden = !isHighlighted

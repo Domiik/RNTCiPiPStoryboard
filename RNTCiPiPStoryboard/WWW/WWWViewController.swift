@@ -8,11 +8,15 @@
 import UIKit
 
 struct Item {
-  var imageName: String
+    var imageName: String
+    //var nameStringW: String
 }
 
 class WWWViewController: UIViewController {
 
+  var s: ModelWWW!
+
+    
   enum Mode {
     case view
     case select
@@ -20,22 +24,40 @@ class WWWViewController: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
   
-  var items: [Item] = [Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion"),
-                       Item(imageName: "Lion")]
+    var j: [String]!
+    
+    
+    var items: [Item] = [Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox"),
+                       Item(imageName: "whiteBox")]
   
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     let cellIdentifier = "ItemCollectionViewCell"
-    let viewImageSegueIdentifier = "viewImageSegueIdentifier"
+    
     var i = 0
     
   var mMode: Mode = .view {
@@ -77,6 +99,8 @@ class WWWViewController: UIViewController {
     setupBarButtonItems()
     setupCollectionView()
     setupCollectionViewItemSize()
+   
+    
   }
   
   override func viewWillLayoutSubviews() {
@@ -86,13 +110,9 @@ class WWWViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     //let item = sender as! Item
     
-    if segue.identifier == viewImageSegueIdentifier {
-    if let vc = segue.destination as? WWWViewerViewController {
-            
-          }
-    }
-    if segue.identifier == "Card" {
-        if let vc = segue.destination as? TestOneViewController {
+   
+    if segue.identifier == "WhatCard" {
+        if let vc = segue.destination as? WhatViewController {
             
         }
     }
@@ -126,13 +146,14 @@ class WWWViewController: UIViewController {
 extension WWWViewController: UICollectionViewDelegate, UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return items.count
+    return ModelWWW.instance.firstCollection.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCollectionViewCell
     
     cell.imageView.image = UIImage(named: items[indexPath.item].imageName)
+    cell.nameW.text = ModelWWW.instance.nameQualities[indexPath.item].description
     
     return cell
   }
@@ -141,20 +162,21 @@ extension WWWViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     switch mMode {
     case .view:
       collectionView.deselectItem(at: indexPath, animated: true)
-      let item = items[indexPath.item]
-      performSegue(withIdentifier: viewImageSegueIdentifier, sender: item)
     case .select:
       dictionarySelectedIndecPath[indexPath] = true
         var cell = collectionView.cellForItem(at: indexPath)
             if cell?.isSelected == true {
+                    let item = indexPath.item
                     i += 1
+                    //record selected cell in array for calculation of results
+                    ModelWWW.instance.qualitiesArray.append(item + 1)
                     cell?.backgroundColor = UIColor.green
                     if i == 9 {
                         let alert = UIAlertController(title: "Вы согласны с выбором", message: "Это окончательное решение", preferredStyle: .alert)
 
                         alert.addAction(UIAlertAction(title: "Да", style: .default, handler: {
                         action in
-                            self.performSegue(withIdentifier: "Card", sender: self)
+                            self.performSegue(withIdentifier: "WhatCard", sender: self)
                             self.i = 0
                         }))
                         alert.addAction(UIAlertAction(title: "Нет", style: .cancel, handler: {
