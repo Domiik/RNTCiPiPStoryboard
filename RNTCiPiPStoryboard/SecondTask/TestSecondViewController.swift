@@ -316,6 +316,7 @@ class TestSecondViewController: UIViewController {
     
     
     @IBAction func EndTest(_ sender: Any) {
+        postTest()
         defaults.set(true, forKey: "thirdAchiement")
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
         let vc = storyboard.instantiateViewController(withIdentifier: "Back")

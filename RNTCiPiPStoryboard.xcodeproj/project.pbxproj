@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11916856660CA7F72B2B81C2 /* Pods_RNTCiPiPStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E350560AA365F07686AC335 /* Pods_RNTCiPiPStoryboard.framework */; };
 		622B72752451D94300EDE40F /* WhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622B72742451D94300EDE40F /* WhereViewController.swift */; };
 		625484F5240BB78E00749D26 /* WWWCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484F4240BB78E00749D26 /* WWWCollectionViewController.swift */; };
 		625484F7240BC13500749D26 /* WWWCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625484F6240BC13500749D26 /* WWWCollectionViewCell.swift */; };
@@ -28,7 +27,7 @@
 		62D9DDD923F97385007517B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDD723F97385007517B9 /* Main.storyboard */; };
 		62D9DDDB23F97388007517B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDDA23F97388007517B9 /* Assets.xcassets */; };
 		62D9DDDE23F97388007517B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDDC23F97388007517B9 /* LaunchScreen.storyboard */; };
-		62EAA4D523FB354700EC5232 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EAA4D423FB354700EC5232 /* ProfileViewController.swift */; };
+		62E3383E251AAF070011C7DE /* Pods_RNTCiPiPStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E350560AA365F07686AC335 /* Pods_RNTCiPiPStoryboard.framework */; };
 		62EBA0D223FAC8D400FA2E78 /* TestOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EBA0D123FAC8D400FA2E78 /* TestOneViewController.swift */; };
 		62FB7536245E38E70052692D /* ModelWWW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FB7535245E38E70052692D /* ModelWWW.swift */; };
 		62FD86A323FDE71B00E1D3B5 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD86A223FDE71B00E1D3B5 /* Points.swift */; };
@@ -50,7 +49,7 @@
 		62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TackCollectionViewController.swift; sourceTree = "<group>"; };
 		62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		62B3F3002451CF0300B855CE /* WhatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatViewController.swift; sourceTree = "<group>"; };
-		62D9DDCE23F97385007517B9 /* RNTCiPiPStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTCiPiPStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D9DDCE23F97385007517B9 /* Моя профессия.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Моя профессия.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D9DDD123F97385007517B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D9DDD323F97385007517B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		62D9DDD523F97385007517B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		62D9DDDA23F97388007517B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62D9DDDD23F97388007517B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62D9DDDF23F97388007517B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62EAA4D423FB354700EC5232 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		62EBA0D123FAC8D400FA2E78 /* TestOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOneViewController.swift; sourceTree = "<group>"; };
 		62FB7535245E38E70052692D /* ModelWWW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWWW.swift; sourceTree = "<group>"; };
 		62FD86A223FDE71B00E1D3B5 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
@@ -71,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11916856660CA7F72B2B81C2 /* Pods_RNTCiPiPStoryboard.framework in Frameworks */,
+				62E3383E251AAF070011C7DE /* Pods_RNTCiPiPStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +141,7 @@
 		62D9DDCF23F97385007517B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				62D9DDCE23F97385007517B9 /* RNTCiPiPStoryboard.app */,
+				62D9DDCE23F97385007517B9 /* Моя профессия.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,7 +169,6 @@
 		62EBA0D423FB318900FA2E78 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				62EAA4D423FB354700EC5232 /* ProfileViewController.swift */,
 				627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */,
 			);
 			path = Profile;
@@ -196,7 +193,7 @@
 			);
 			name = RNTCiPiPStoryboard;
 			productName = RNTCiPiPStoryboard;
-			productReference = 62D9DDCE23F97385007517B9 /* RNTCiPiPStoryboard.app */;
+			productReference = 62D9DDCE23F97385007517B9 /* Моя профессия.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +212,7 @@
 				};
 			};
 			buildConfigurationList = 62D9DDC923F97385007517B9 /* Build configuration list for PBXProject "RNTCiPiPStoryboard" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -309,7 +306,6 @@
 				627AF15923FB3FF000AE04A1 /* ProfilePieViewController.swift in Sources */,
 				62D9DDD223F97385007517B9 /* AppDelegate.swift in Sources */,
 				622B72752451D94300EDE40F /* WhereViewController.swift in Sources */,
-				62EAA4D523FB354700EC5232 /* ProfileViewController.swift in Sources */,
 				62FD86A323FDE71B00E1D3B5 /* Points.swift in Sources */,
 				625484FC240C340300749D26 /* CustomLayout.swift in Sources */,
 				62D9DDD423F97385007517B9 /* SceneDelegate.swift in Sources */,
@@ -460,12 +456,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7LT4SWZY4;
 				INFOPLIST_FILE = RNTCiPiPStoryboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Domiik.RNTCiPiPStoryboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Domiik.MyProfession;
+				PRODUCT_NAME = "Моя профессия";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -479,12 +477,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7LT4SWZY4;
 				INFOPLIST_FILE = RNTCiPiPStoryboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Domiik.RNTCiPiPStoryboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Domiik.MyProfession;
+				PRODUCT_NAME = "Моя профессия";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
