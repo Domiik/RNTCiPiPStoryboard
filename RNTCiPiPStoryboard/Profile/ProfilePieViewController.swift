@@ -77,7 +77,7 @@ class ProfilePieViewController: UIViewController {
         paragraphStyle.lineBreakMode = .byTruncatingTail
         paragraphStyle.alignment = .center
         
-        let centerText = NSMutableAttributedString(string: "Колесо компетентности")
+        let centerText = NSMutableAttributedString(string: "Компетентности")
         centerText.setAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 13)!,
                                   .paragraphStyle : paragraphStyle], range: NSRange(location: 0, length: centerText.length))
         

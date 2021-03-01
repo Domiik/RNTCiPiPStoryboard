@@ -27,33 +27,33 @@ class WWWViewController: UIViewController {
     var j: [String]!
     
     
-    var items: [Item] = [Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox"),
-                         Item(imageName: "whiteBox")]
+    var items: [Item] = [Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur"),
+                         Item(imageName: "blur")]
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     let cellIdentifier = "ItemCollectionViewCell"
@@ -99,8 +99,6 @@ class WWWViewController: UIViewController {
         setupBarButtonItems()
         setupCollectionView()
         setupCollectionViewItemSize()
-        
-        
     }
     
     override func viewWillLayoutSubviews() {
@@ -151,8 +149,6 @@ extension WWWViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCollectionViewCell
-        
-        cell.imageView.image = UIImage(named: items[indexPath.item].imageName)
         cell.nameW.text = ModelWWW.instance.nameQualities[indexPath.item].description
         
         return cell
@@ -170,7 +166,6 @@ extension WWWViewController: UICollectionViewDelegate, UICollectionViewDataSourc
                 i += 1
                 //record selected cell in array for calculation of results
                 ModelWWW.instance.qualitiesArray.append(item + 1)
-                cell?.backgroundColor = UIColor.green
                 if i == 9 {
                     let alert = UIAlertController(title: "Вы согласны с выбором", message: "Это окончательное решение", preferredStyle: .alert)
                     
@@ -183,6 +178,8 @@ extension WWWViewController: UICollectionViewDelegate, UICollectionViewDataSourc
                         action in
                         self.mMode = self.mMode == .select ? .view : .select
                         self.i = 0
+                        
+                        
                     }))
                     
                     self.present(alert, animated: true)
@@ -191,9 +188,13 @@ extension WWWViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
+    
+    //когда отжали cell обатно пропал индикатор и цвет
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if mMode == .select {
             dictionarySelectedIndecPath[indexPath] = false
+            let cell = collectionView.cellForItem(at: indexPath)
+            i -= 1
         }
     }
     
@@ -204,4 +205,5 @@ extension WWWViewController: CustomLayoutDelegate {
         return UIImage(named: items[indexPath.item].imageName)!.size
     }
 }
+
 

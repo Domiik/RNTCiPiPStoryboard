@@ -20,14 +20,15 @@ class TestSecondViewController: UIViewController {
     var countThirdButton = 0
     
     let defaults = UserDefaults.standard
+    let apiClient = ApiClient()
     
     struct Data: Encodable {
-           let title: String
-           let mm: Int
-           let mn: Int
-           let mt: Int
-           let ms: Int
-           let ma: Int
+        let title: String
+        let mm: Int
+        let mn: Int
+        let mt: Int
+        let ms: Int
+        let ma: Int
     }
     
     override func viewDidLoad() {
@@ -223,10 +224,10 @@ class TestSecondViewController: UIViewController {
         
         count += 1
         if count == 21 {
-           endTest.isHidden = false
+            endTest.isHidden = false
         }
         
-          randomImage()
+        randomImage()
     }
     @IBAction func neutralButton(_ sender: Any) {
         countSecondButton += 1
@@ -317,39 +318,42 @@ class TestSecondViewController: UIViewController {
     
     @IBAction func EndTest(_ sender: Any) {
         postTest()
-        defaults.set(true, forKey: "thirdAchiement")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let vc = storyboard.instantiateViewController(withIdentifier: "Back")
-        vc.definesPresentationContext = true
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true, completion: nil);
+      
     }
     
     
     func postTest() {
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/json",
-            "Authorization": "Bearer \(self.defaults.object(forKey: "Token")!)"
-        ]
-        
-        let data = Data(title: "ДРПН", mm: Points.getPointHuman(), mn: Points.getPointNature(), mt: Points.getPointTechnique(), ms: Points.getPointSignSystem(), ma: Points.getPointArtistic())
-        AF.request("https://bromanla.ml/s/tests",
-        method: .post,
-        parameters: data,
-        encoder: JSONParameterEncoder.default,
-        headers: headers)
-        .responseString{ response in
-            //print(response.result)
-            switch response.result {
-                case .success:
-                    print("succsesOKOKOK")
-                case .failure(let error):
-                    if let data = response.data {
-                        print("Print Server Error: " + String(data: data, encoding: String.Encoding.utf8)!)
-                    }
+        apiClient.postSecondTest(title: "ДРПН", mm: Points.getPointHuman(), mn: Points.getPointNature(), mt: Points.getPointTechnique(), ms: Points.getPointSignSystem(), ma: Points.getPointArtistic(), completion: {
+            result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let value) :
+                    self.defaults.set(true, forKey: "thirdAchiement")
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil);
+                    let vc = storyboard.instantiateViewController(withIdentifier: "Back")
+                    vc.definesPresentationContext = true
+                    vc.modalPresentationStyle = .overCurrentContext
+                    self.present(vc, animated: true, completion: nil);
+                    break
+                case .failure(let error) :
+                    if error as! ApiError == ApiError.noData {
+                        let alert = UIAlertController(title: "Ошибка", message: "Неверный логин или пароль", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        //self.activityIndicator.stopAnimating()
                         print(error)
+                        break
+                    } else if error as! ApiError == ApiError.noConnection {
+                        let alert = UIAlertController(title: "Ошибка", message: "Нет интеренет соединения", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        //self.activityIndicator.stopAnimating()
+                        break
+                    }
+                    break
                 }
-        }
+            }
+        })
     }
     
 }

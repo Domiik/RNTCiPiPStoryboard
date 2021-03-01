@@ -37,17 +37,6 @@ class ViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        //        defaults.removeObject(forKey: "Token")
-        //        defaults.removeObject(forKey: "pointHuman")
-        //        defaults.removeObject(forKey: "pointNature")
-        //        defaults.removeObject(forKey: "pointArtisticImage")
-        //        defaults.removeObject(forKey: "pointTechnique")
-        //        defaults.removeObject(forKey: "pointSignSystem")
-        //
-        //        defaults.removeObject(forKey: "firstAchievement")
-        //        defaults.removeObject(forKey: "secondAchievement")
-        //        defaults.removeObject(forKey: "thirdAchiement")
         //auto login if token true
         if(defaults.object(forKey: "Token") != nil) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
@@ -72,37 +61,37 @@ class ViewController: UIViewController {
                    parameters: login,
                    encoder: JSONParameterEncoder.default,
                    headers: headers).responseJSON { response in
-                //debugPrint(response)
-                switch response.result {
-                case .success:
-                    //print("OKKKK")
-                    if response.data != nil {
-                        let json = try? JSON(data: response.data!)
-                        let token = json?["jwt"].string
-                        let tokenForLogout = json?["token"].string
-                        self.defaults.set(tokenForLogout, forKey: "Logout")
-                        self.defaults.set(token, forKey: "Token")
-                        //print(self.defaults.object(forKey: "Token"))
-                        self.activityIndicator.startAnimating()
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-                        let vc = storyboard.instantiateViewController(withIdentifier: "Back")
-                        vc.definesPresentationContext = true
-                        vc.modalPresentationStyle = .overCurrentContext
-                        self.present(vc, animated: true, completion: nil);
+                    //debugPrint(response)
+                    switch response.result {
+                    case .success:
+                        //print("OKKKK")
+                        if response.data != nil {
+                            let json = try? JSON(data: response.data!)
+                            let token = json?["jwt"].string
+                            let tokenForLogout = json?["token"].string
+                            self.defaults.set(tokenForLogout, forKey: "Logout")
+                            self.defaults.set(token, forKey: "Token")
+                            //print(self.defaults.object(forKey: "Token"))
+                            self.activityIndicator.startAnimating()
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil);
+                            let vc = storyboard.instantiateViewController(withIdentifier: "Back")
+                            vc.definesPresentationContext = true
+                            vc.modalPresentationStyle = .overCurrentContext
+                            self.present(vc, animated: true, completion: nil);
+                        }
+                        break
+                    case .failure(let error):
+                        print("neok")
+                        let alert = UIAlertController(title: "Ошибка", message: "Неверный логин или пароль", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        print(error)
                     }
-                    break
-                case .failure(let error):
-                    print("neok")
-                    let alert = UIAlertController(title: "Ошибка", message: "Неверный логин или пароль", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                    print(error)
-                }
-                
+                    
                     self.activityIndicator.stopAnimating()
-        }
+                   }
     }
-
+    
     
     
 }

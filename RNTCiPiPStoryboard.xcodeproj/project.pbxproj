@@ -21,9 +21,11 @@
 		62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */; };
 		62A5E62223FAB3D4006FBB83 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */; };
 		62B3F3012451CF0300B855CE /* WhatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B3F3002451CF0300B855CE /* WhatViewController.swift */; };
+		62CFA2D325C852050069637E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CFA2D225C852050069637E /* LoginViewController.swift */; };
+		62CFA2D625C85F100069637E /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CFA2D525C85F100069637E /* ApiCall.swift */; };
+		62CFA2DA25C861380069637E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CFA2D925C861380069637E /* Player.swift */; };
 		62D9DDD223F97385007517B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D9DDD123F97385007517B9 /* AppDelegate.swift */; };
 		62D9DDD423F97385007517B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D9DDD323F97385007517B9 /* SceneDelegate.swift */; };
-		62D9DDD623F97385007517B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D9DDD523F97385007517B9 /* ViewController.swift */; };
 		62D9DDD923F97385007517B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDD723F97385007517B9 /* Main.storyboard */; };
 		62D9DDDB23F97388007517B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDDA23F97388007517B9 /* Assets.xcassets */; };
 		62D9DDDE23F97388007517B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D9DDDC23F97388007517B9 /* LaunchScreen.storyboard */; };
@@ -49,10 +51,12 @@
 		62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TackCollectionViewController.swift; sourceTree = "<group>"; };
 		62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		62B3F3002451CF0300B855CE /* WhatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatViewController.swift; sourceTree = "<group>"; };
+		62CFA2D225C852050069637E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		62CFA2D525C85F100069637E /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		62CFA2D925C861380069637E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		62D9DDCE23F97385007517B9 /* Моя профессия.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Моя профессия.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D9DDD123F97385007517B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D9DDD323F97385007517B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62D9DDD523F97385007517B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62D9DDD823F97385007517B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62D9DDDA23F97388007517B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62D9DDDD23F97388007517B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,13 +159,15 @@
 				628C00C623F997F900BF2498 /* Task */,
 				62D9DDD123F97385007517B9 /* AppDelegate.swift */,
 				62D9DDD323F97385007517B9 /* SceneDelegate.swift */,
-				62D9DDD523F97385007517B9 /* ViewController.swift */,
 				62D9DDD723F97385007517B9 /* Main.storyboard */,
 				62D9DDDA23F97388007517B9 /* Assets.xcassets */,
 				62D9DDDC23F97388007517B9 /* LaunchScreen.storyboard */,
 				62D9DDDF23F97388007517B9 /* Info.plist */,
 				628C00BE23F9931200BF2498 /* DesignableView.swift */,
 				62FD86A223FDE71B00E1D3B5 /* Points.swift */,
+				62CFA2D225C852050069637E /* LoginViewController.swift */,
+				62CFA2D525C85F100069637E /* ApiCall.swift */,
+				62CFA2D925C861380069637E /* Player.swift */,
 			);
 			path = RNTCiPiPStoryboard;
 			sourceTree = "<group>";
@@ -290,15 +296,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62CFA2DA25C861380069637E /* Player.swift in Sources */,
 				625484FE240C340300749D26 /* ItemCollectionViewCell.swift in Sources */,
 				625D5A2A24AA307F00933355 /* CalculationOfResultsWWW.swift in Sources */,
 				62FB7536245E38E70052692D /* ModelWWW.swift in Sources */,
 				625484F5240BB78E00749D26 /* WWWCollectionViewController.swift in Sources */,
 				6290706224ED7C79005F5CAE /* TestSecondViewController.swift in Sources */,
 				628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */,
-				62D9DDD623F97385007517B9 /* ViewController.swift in Sources */,
 				62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */,
+				62CFA2D325C852050069637E /* LoginViewController.swift in Sources */,
 				625484FD240C340300749D26 /* WWWViewController.swift in Sources */,
+				62CFA2D625C85F100069637E /* ApiCall.swift in Sources */,
 				62B3F3012451CF0300B855CE /* WhatViewController.swift in Sources */,
 				62A5E62223FAB3D4006FBB83 /* TaskCollectionViewCell.swift in Sources */,
 				62EBA0D223FAC8D400FA2E78 /* TestOneViewController.swift in Sources */,
