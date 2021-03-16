@@ -18,7 +18,6 @@
 		627AF15923FB3FF000AE04A1 /* ProfilePieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */; };
 		628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C00BE23F9931200BF2498 /* DesignableView.swift */; };
 		6290706224ED7C79005F5CAE /* TestSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6290706124ED7C79005F5CAE /* TestSecondViewController.swift */; };
-		62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */; };
 		62A5E62223FAB3D4006FBB83 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */; };
 		62B3F3012451CF0300B855CE /* WhatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B3F3002451CF0300B855CE /* WhatViewController.swift */; };
 		62CFA2D325C852050069637E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CFA2D225C852050069637E /* LoginViewController.swift */; };
@@ -48,7 +47,6 @@
 		627AF15823FB3FF000AE04A1 /* ProfilePieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePieViewController.swift; sourceTree = "<group>"; };
 		628C00BE23F9931200BF2498 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		6290706124ED7C79005F5CAE /* TestSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSecondViewController.swift; sourceTree = "<group>"; };
-		62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TackCollectionViewController.swift; sourceTree = "<group>"; };
 		62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		62B3F3002451CF0300B855CE /* WhatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatViewController.swift; sourceTree = "<group>"; };
 		62CFA2D225C852050069637E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 		628C00C623F997F900BF2498 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				62A5E61F23FAAFDE006FBB83 /* TackCollectionViewController.swift */,
 				62A5E62123FAB3D4006FBB83 /* TaskCollectionViewCell.swift */,
 				62EBA0D123FAC8D400FA2E78 /* TestOneViewController.swift */,
 			);
@@ -303,7 +300,6 @@
 				625484F5240BB78E00749D26 /* WWWCollectionViewController.swift in Sources */,
 				6290706224ED7C79005F5CAE /* TestSecondViewController.swift in Sources */,
 				628C00BF23F9931200BF2498 /* DesignableView.swift in Sources */,
-				62A5E62023FAAFDE006FBB83 /* TackCollectionViewController.swift in Sources */,
 				62CFA2D325C852050069637E /* LoginViewController.swift in Sources */,
 				625484FD240C340300749D26 /* WWWViewController.swift in Sources */,
 				62CFA2D625C85F100069637E /* ApiCall.swift in Sources */,

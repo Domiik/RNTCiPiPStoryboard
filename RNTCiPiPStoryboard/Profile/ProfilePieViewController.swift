@@ -56,8 +56,6 @@ class ProfilePieViewController: UIViewController {
         spiner.startAnimating()
         postTest()
         
-        
-        print("FViewload")
         // Do any additional setup after loading the view.
     }
     
